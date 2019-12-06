@@ -5,8 +5,8 @@ namespace EventDispatcher
 {
     public interface IEventDispatcherContext
     {
-        void Dispatch<TEvent>();
+        void Dispatch<TEvent>() where TEvent : IEvent;
 
-        Task DispatchAsync<TEvent>(CancellationToken cancellationToken = default(CancellationToken));
+        Task DispatchAsync<TEvent>(CancellationToken cancellationToken = default(CancellationToken)) where TEvent : IEvent;
     }
 }
