@@ -10,5 +10,7 @@ namespace EventDispatcher
         void AddEvent(IEvent @event);
 
         void AddEvents(IEnumerable<IEvent> events);
+
+        void ClearEvents();
     }
 }
